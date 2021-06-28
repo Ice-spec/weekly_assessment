@@ -1,0 +1,15 @@
+fun main(args: Array<String>) {
+    var word= "Good Food"
+    println("Original word : "+word)
+    println("Reversed word : " + reverseString(word)) }
+    var reverse = ""
+
+fun reverseString(string: String): String {
+
+    if(string.length == 1) {
+        return string
+    } else {
+        reverse += string[string.length - 1] + reverseString(string.substring(0, string.length - 1))
+        return reverse
+    }
+}
